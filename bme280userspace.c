@@ -170,12 +170,10 @@ int8_t stream_sensor_data_forced_mode(struct bme280_dev *dev)
   while (1)
   {
     rslt = bme280_set_sensor_mode(BME280_FORCED_MODE, dev);
-    configPRINTF(("rslt1 : %d\n", rslt));
 
     /* Wait for the measurement to complete and print data @25Hz */
     dev->delay_ms(40);
     rslt = bme280_get_sensor_data(BME280_ALL, &comp_data, dev);
-    configPRINTF(("rslt2 : %d\n", rslt));
 
     print_sensor_data(&comp_data);
     vTaskDelay(500 / portTICK_PERIOD_MS);
