@@ -1,7 +1,7 @@
 # BME280_on_ESP-IDF_I2C
 
 
-Using BME280 on ESP-IDF(ESP32) using I2C and official driver(https://github.com/BoschSensortec/BME280_driver).
+Using BME280 on ESP-IDF(ESP32) using I2C, FreeRTOS and official driver(https://github.com/BoschSensortec/BME280_driver).
 ```
 
 #include "bme280userspace.c"
